@@ -1,14 +1,16 @@
 package animalkingdom;
 
 abstract class Animal {
+    private static int maxid = 0;
     protected int id;
     protected String name;
     protected int yearNamed;
 
-    public Animal(int id, String name, int yearNamed) {
-        this.id = id;
+    public Animal(String name, int yearNamed) {
         this.name = name;
         this.yearNamed = yearNamed;
+        this.id = maxid;
+        maxid++;
     }
 
     abstract String move();

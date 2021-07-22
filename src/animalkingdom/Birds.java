@@ -1,8 +1,8 @@
 package animalkingdom;
 
 public class Birds extends Animal {
-    public Birds(int id, String name, int yearNamed) {
-        super(id, name, yearNamed);
+    public Birds(String name, int yearNamed) {
+        super(name, yearNamed);
     }
 
     @Override

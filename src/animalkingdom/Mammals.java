@@ -2,8 +2,8 @@ package animalkingdom;
 
 public class Mammals extends Animal {
 
-    public Mammals(int id, String name, int yearNamed) {
-        super(id, name, yearNamed);
+    public Mammals(String name, int yearNamed) {
+        super(name, yearNamed);
     }
 
     @Override
