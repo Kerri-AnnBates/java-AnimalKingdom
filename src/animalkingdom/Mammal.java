@@ -8,16 +8,16 @@ public class Mammal extends Animal {
 
     @Override
     public String move() {
-        return "Move by walking";
+        return "walk";
     }
 
     @Override
     public String breathe() {
-        return "Breathe with lungs";
+        return "lungs";
     }
 
     @Override
     public String reproduce() {
-        return "Reproduce via live birth";
+        return "live birth";
     }
 }
