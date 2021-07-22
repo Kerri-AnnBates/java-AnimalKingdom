@@ -46,5 +46,4 @@ abstract class Animal {
     void setYearNamed(int yearNamed) {
         this.yearNamed = yearNamed;
     }
-
 }
