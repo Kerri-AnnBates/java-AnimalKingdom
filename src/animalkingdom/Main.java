@@ -12,6 +12,7 @@ public class Main {
         Mammal panda = new Mammal("Panda", 1869);
         Mammal zebra = new Mammal("Zebra", 1778);
         Mammal sloth = new Mammal("Sloth", 1804);
+        Mammal kaola = new Mammal("Kaola", 1816);
         Mammal armadillo = new Mammal("Armadillo", 1758);
         Mammal raccoon = new Mammal("Raccon", 1758);
         Mammal bigfoot = new Mammal("Bigfoot", 2021);
@@ -41,6 +42,7 @@ public class Main {
         animals.add(toucan);
         animals.add(swan);
         animals.add(salmon);
+        animals.add(kaola);
         animals.add(catfish);
         animals.add(perch);
 
@@ -82,6 +84,13 @@ public class Main {
         System.out.println("\n*** List alphabetically only those animals that were named in 1758 ***");
         filteredList = Animal.filterAnimals(animals, (a) -> a.getYearNamed() == 1758);
         filteredList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        for (Animal animal : filteredList) {
+            System.out.println(
+                    animal.getName() + " " + animal.reproduce() + " " + animal.breathe() + " " + animal.getYearNamed());
+        }
+
+        System.out.println("\n*** For the list of animals, list alphabetically those animals that are mammals ***");
+        filteredList = Animal.filterAnimals(animals, (a) -> a instanceof Mammal);
         for (Animal animal : filteredList) {
             System.out.println(
                     animal.getName() + " " + animal.reproduce() + " " + animal.breathe() + " " + animal.getYearNamed());
